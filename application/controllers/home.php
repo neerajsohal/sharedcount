@@ -13,6 +13,7 @@ class Home extends __APP__ {
 		} else {
 			$url = $this->input->post('url');
 			$this->data['counts'] = $this->get_counts($url);
+			$this->data['url'] = $url;
 		}
 		$this->load->view('home/index', $this->data);
 	}
@@ -23,7 +24,8 @@ class Home extends __APP__ {
 		
 		$result = array();
 		$result['facebook'] = json_decode($fb_counts);
-		
+		$tw_counts = @file_get_contents('http://cdn.api.twitter.com/1/urls/count.json?url='.$url);
+		$result['twitter'] = json_decode($tw_counts);
 		return $result;
 		
 	}

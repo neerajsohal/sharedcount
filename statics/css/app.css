@@ -1,6 +1,7 @@
 body {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, arial, sans-serif;
 	font-weight: 100;
+	
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,6 +18,17 @@ h1, h2, h3, h4, h5, h6 {
 .prepend-top {
 	margin-top: 1.5em;
 }
+.loadie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	width: 0;
+	height: 4px;
+	-webkit-transition: width 0.5s ease-out;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
+}
+
 
 /* Extra small devices (phones, up to 480px) */
 /* No media query since this is the default in Bootstrap */

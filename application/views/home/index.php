@@ -24,18 +24,40 @@
 	<div class="container prepend-top">
 		<div class="row">
 			<div class="col-lg-12">
-				<table class="table table-striped">
+				<table class="table">
 					<tr>
-						<td colspan="2">
-							<h4>Facebook</h4>
-						</td>
+						<th colspan="2">
+							<?php echo anchor('http://facbeook.com/', 'Facebook', 'target="_blank"'); ?>
+						</th>
 					</tr>
 					<tr>
 						<td>
-							<p class="lead droidFont">Shares: <strong><?php echo $counts['facebook']->shares; ?></strong></p>
+							<span class="lead droidFont">Shares: <strong><?php echo $counts['facebook']->shares; ?></strong></span>
 						</td>
 						<td>
-							<p class="lead droidFont">Comments: <strong><?php echo $counts['facebook']->comments; ?></strong></p>
+							<span class="lead droidFont">Comments: <strong><?php echo $counts['facebook']->comments; ?></strong></span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<small><?php echo anchor('http://graph.facebook.com/'.$url,'http://graph.facebook.com/'.$url, 'target="_blank"'); ?></small>
+						</td>
+					</tr>
+				</table>
+				<table class="table">
+					<tr>
+						<th colspan="2">
+							<?php echo anchor('http://twitter.com/', 'Twitter', 'target="_blank"'); ?>
+						</th>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="lead droidFont">Shares: <strong><?php echo $counts['twitter']->count; ?></strong></span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<small><?php echo anchor('https://cdn.api.twitter.com/1/urls/count.json?url='.$url,'https://cdn.api.twitter.com/1/urls/count.json?url='.$url, 'target="_blank"'); ?></small>
 						</td>
 					</tr>
 				</table>
