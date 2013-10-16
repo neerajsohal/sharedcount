@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 .count {
 	text-align: center;
 	background: #ddd;
+	margin-top: .5em;
 }
 .count .number {
 	font-size: 2em;

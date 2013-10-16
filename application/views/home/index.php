@@ -48,7 +48,6 @@
 					</div>
 				</div>
 				<p><small><?php echo anchor('http://graph.facebook.com/'.$url,'http://graph.facebook.com/'.$url, 'target="_blank"'); ?></small></p>
-
 				
 				<h3><?php echo anchor('http://twitter.com/', 'Twitter', 'target="_blank"'); ?></h3>
 				<div class="row">
@@ -58,12 +57,27 @@
 								<span class="droidFont"><?php echo $counts['twitter']->count; ?></span>
 							</div>
 							<div class="text">
-								shares
+								count
 							</div>
 						</div>
 					</div>
 				</div>
 				<p><small><?php echo anchor('https://cdn.api.twitter.com/1/urls/count.json?url='.$url,'https://cdn.api.twitter.com/1/urls/count.json?url='.$url, 'target="_blank"'); ?></small></p>
+				
+				<h3><?php echo anchor('http://pinterest.com/', 'Pinterest', 'target="_blank"'); ?></h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="count">
+							<div class="number">
+								<span class="droidFont"><?php echo $counts['pinterest']->count; ?></span>
+							</div>
+							<div class="text">
+								count
+							</div>
+						</div>
+					</div>
+				</div>
+				<p><small><?php echo anchor('http://api.pinterest.com/v1/urls/count.json?callback=&url='.$url,'http://api.pinterest.com/v1/urls/count.json?callback=&url='.$url, 'target="_blank"'); ?></small></p>
 			</div>
 		</div>
 	</div>
