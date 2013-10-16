@@ -11,7 +11,7 @@
 					<div class="input-group">
 				      <input name="url" type="url" class="form-control input-lg" placeholder="enter a url e.g. http://google.com/" value="<?php echo set_value('url'); ?>" />
 				      <span class="input-group-btn">
-				        <button class="btn btn-default input-lg" type="button">Go</button>
+				        <button class="btn btn-default input-lg" type="submit">Go</button>
 				      </span>
 				    </div>
 				    <span class="help-block">Enter a valid url for which you want to see the social sharing counts.</span>
@@ -32,10 +32,10 @@
 					</tr>
 					<tr>
 						<td>
-							<span class="lead droidFont">Shares: <strong><?php echo $counts['facebook']->shares; ?></strong></span>
+							<span class="lead droidFont">Shares: <strong><?php echo $counts['facebook']['shares']; ?></strong></span>
 						</td>
 						<td>
-							<span class="lead droidFont">Comments: <strong><?php echo $counts['facebook']->comments; ?></strong></span>
+							<span class="lead droidFont">Comments: <strong><?php echo $counts['facebook']['comments']; ?></strong></span>
 						</td>
 					</tr>
 					<tr>
