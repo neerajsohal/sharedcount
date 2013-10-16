@@ -103,14 +103,13 @@
 					</div>
 				</div>
 				<p><small><?php echo anchor('http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json','http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json', 'target="_blank"'); ?></small></p>
-			</div>
 			
 				<h3><?php echo anchor('http://stumbleupon.com/', 'StumbleUpon', 'target="_blank"'); ?></h3>
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="count">
 							<div class="number">
-								<span class="droidFont"><?php echo $counts['stumbleupon']->result->views; ?></span>
+								<span class="droidFont"><?php echo $counts['stumbleupon']['result']['views']; ?></span>
 							</div>
 							<div class="text">
 								views
@@ -119,6 +118,7 @@
 					</div>
 				</div>
 				<p><small><?php echo anchor('http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json','http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json', 'target="_blank"'); ?></small></p>
+				
 			</div>
 		</div>
 	</div>

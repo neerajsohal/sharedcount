@@ -40,7 +40,10 @@ class Home extends __APP__ {
 		$result['linkedin'] = json_decode($linkedin_counts);
 
 		$su_counts = @file_get_contents('http://www.stumbleupon.com/services/1.01/badge.getinfo?url='.$url);
-		$result['stumbleupon'] = json_decode($su_counts);
+		$su_counts = json_decode($su_counts, true);
+		(isset($su_counts['result']['views']) && $su_counts['result']['views'] > 0) ? : $su_counts['result']['views'] = 0 ;
+
+		$result['stumbleupon'] = $su_counts;
 		
 		
 		return $result;
