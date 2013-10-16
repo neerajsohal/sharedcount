@@ -20,7 +20,7 @@
 			</div>
 		</div>
 	</div>
-	
+	<?php if(isset($counts)) { ?>
 	<div class="container prepend-top">
 		<div class="row">
 			<div class="col-lg-12">
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-
+	<?php } ?>
 
 </div>
 
