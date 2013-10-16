@@ -26,7 +26,17 @@
 			<div class="col-lg-12">
 				<h3><?php echo anchor('http://facbeook.com/', 'Facebook', 'target="_blank"'); ?></h3>
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-4">
+						<div class="count">
+							<div class="number">
+								<span class="droidFont"><?php echo $counts['facebook']['likes']; ?></span>
+							</div>
+							<div class="text">
+								likes
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
 						<div class="count">
 							<div class="number">
 								<span class="droidFont"><?php echo $counts['facebook']['shares']; ?></span>
@@ -36,7 +46,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-4">
 						<div class="count">
 							<div class="number">
 								<span class="droidFont"><?php echo $counts['facebook']['comments']; ?></span>
@@ -78,6 +88,21 @@
 					</div>
 				</div>
 				<p><small><?php echo anchor('http://api.pinterest.com/v1/urls/count.json?callback=&url='.$url,'http://api.pinterest.com/v1/urls/count.json?callback=&url='.$url, 'target="_blank"'); ?></small></p>
+				
+				<h3><?php echo anchor('http://linkedin.com/', 'Linkedin', 'target="_blank"'); ?></h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="count">
+							<div class="number">
+								<span class="droidFont"><?php echo $counts['linkedin']->count; ?></span>
+							</div>
+							<div class="text">
+								count
+							</div>
+						</div>
+					</div>
+				</div>
+				<p><small><?php echo anchor('http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json','http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json', 'target="_blank"'); ?></small></p>
 			</div>
 		</div>
 	</div>

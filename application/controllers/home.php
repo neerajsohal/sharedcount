@@ -26,6 +26,7 @@ class Home extends __APP__ {
 		
 		(isset($fb_counts['comments']) && $fb_counts['comments'] > 0) ? : $fb_counts['comments'] = 0 ;
 		(isset($fb_counts['shares']) && $fb_counts['shares'] > 0) ? : $fb_counts['shares'] = 0 ;
+		(isset($fb_counts['likes']) && $fb_counts['likes'] > 0) ? : $fb_counts['likes'] = 0 ;
 
 		$result['facebook'] = $fb_counts;
 
@@ -34,6 +35,9 @@ class Home extends __APP__ {
 
 		$pin_counts = @file_get_contents('http://api.pinterest.com/v1/urls/count.json?callback=&url='.$url);
 		$result['pinterest'] = json_decode(trim( $pin_counts, '()'));
+
+		$linkedin_counts = @file_get_contents('http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json');
+		$result['linkedin'] = json_decode($linkedin_counts);
 		
 		return $result;
 		
