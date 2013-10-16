@@ -38,6 +38,10 @@ class Home extends __APP__ {
 
 		$linkedin_counts = @file_get_contents('http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json');
 		$result['linkedin'] = json_decode($linkedin_counts);
+
+		$su_counts = @file_get_contents('http://www.stumbleupon.com/services/1.01/badge.getinfo?url='.$url);
+		$result['stumbleupon'] = json_decode($su_counts);
+		
 		
 		return $result;
 		
