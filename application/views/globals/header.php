@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     
     <title>Shared Count</title>
-	<base href="<?php echo base_url(); ?>" />
+    <base href="<?php echo base_url(); ?>" />
     <!-- Bootstrap core CSS -->
     <link href="./statics/css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,200,100' rel='stylesheet' type='text/css'>
@@ -22,12 +22,16 @@
 
   <body>
 
-    <div class="main">
+    
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <h1>Shared Count</h1>
+            <p>
+              <small>
+                A nice little tool that will fetch social media shares for a url
+              </small>
+            </p>
             <hr />
           </div>
         </div>
-      </div>
