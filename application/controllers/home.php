@@ -21,14 +21,23 @@ class Home extends __APP__ {
 	private function get_counts($url = null) {
 		$result = array();
 		
-		$fb_counts = @file_get_contents('http://graph.facebook.com/'.$url);
+		$fql  = "SELECT url, normalized_url, share_count, like_count, comment_count, ";
+		$fql .= "total_count, commentsbox_count, comments_fbid, click_count FROM ";
+		$fql .= "link_stat WHERE url = '".$url."'";
+
+		$apifql="https://api.facebook.com/method/fql.query?format=json&query=".urlencode($fql);
+		$json=file_get_contents($apifql);
+		$result['facebook'] = json_decode($json, true);
+		/*$fb_counts = @file_get_contents('http://graph.facebook.com/'.$url);
 		$fb_counts = json_decode($fb_counts, true);
 		
 		(isset($fb_counts['comments']) && $fb_counts['comments'] > 0) ? : $fb_counts['comments'] = 0 ;
 		(isset($fb_counts['shares']) && $fb_counts['shares'] > 0) ? : $fb_counts['shares'] = 0 ;
 		(isset($fb_counts['likes']) && $fb_counts['likes'] > 0) ? : $fb_counts['likes'] = 0 ;
 
-		$result['facebook'] = $fb_counts;
+		*/
+
+		$result['facebook'] = $result['facebook'][0];
 
 		$tw_counts = @file_get_contents('http://cdn.api.twitter.com/1/urls/count.json?url='.$url);
 		$result['twitter'] = json_decode($tw_counts);
@@ -44,8 +53,7 @@ class Home extends __APP__ {
 		(isset($su_counts['result']['views']) && $su_counts['result']['views'] > 0) ? : $su_counts['result']['views'] = 0 ;
 
 		$result['stumbleupon'] = $su_counts;
-		
-		
+
 		return $result;
 		
 	}

@@ -1,3 +1,4 @@
+	</div>
 	<hr/>
 	<div class="container prepend-top">
 		<div class="row">
