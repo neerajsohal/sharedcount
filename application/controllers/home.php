@@ -24,9 +24,9 @@ class Home extends __APP__ {
 		$fb_counts = @file_get_contents('http://graph.facebook.com/'.$url);
 		$fb_counts = json_decode($fb_counts, true);
 		
-		$fb_counts['comments'] = (isset($fb_count['comments']) && $fb_counts['comments'] > 0)? $fb_count['comments'] : 0 ;
-		$fb_counts['shares'] = (isset($fb_count['shares'])) ? $fb_count['shares'] : 0 ;
-		
+		(isset($fb_count['comments']) && $fb_counts['comments'] > 0) ? : $fb_counts['comments'] = 0 ;
+		(isset($fb_count['shares'])) ? : $fb_count['shares'] = 0 ;
+
 		$result['facebook'] = $fb_counts;
 
 		$tw_counts = @file_get_contents('http://cdn.api.twitter.com/1/urls/count.json?url='.$url);

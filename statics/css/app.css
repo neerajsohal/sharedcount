@@ -1,7 +1,6 @@
 body {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, arial, sans-serif;
 	font-weight: 100;
-	
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,8 +27,13 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-transition: width 0.5s ease-out;
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
 }
-
-
+.count {
+	text-align: center;
+	background: #ddd;
+}
+.count .number {
+	font-size: 2em;
+}
 /* Extra small devices (phones, up to 480px) */
 /* No media query since this is the default in Bootstrap */
 
