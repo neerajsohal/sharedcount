@@ -42,8 +42,8 @@ class Home extends __APP__ {
 		$tw_counts = @file_get_contents('http://cdn.api.twitter.com/1/urls/count.json?url='.$url);
 		$result['twitter'] = json_decode($tw_counts);
 
-		$pin_counts = @file_get_contents('http://api.pinterest.com/v1/urls/count.json?callback=&url='.$url);
-		$result['pinterest'] = json_decode(trim( $pin_counts, '()'));
+		$pin_counts = @file_get_contents('http://api.pinterest.com/v1/urls/count.json?callback=processpins&url='.$url);
+		$result['pinterest'] = json_decode(trim( $pin_counts, 'processpins()'));
 
 		$linkedin_counts = @file_get_contents('http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json');
 		$result['linkedin'] = json_decode($linkedin_counts);

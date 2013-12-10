@@ -26,7 +26,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1>Shared Count</h1>
+            <h1><a href="<?php echo site_url(); ?>">Shared Count</a></h1>
             <p>
               <small>
                 A nice little tool that will fetch social media shares for a url
