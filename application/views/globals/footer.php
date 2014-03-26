@@ -16,6 +16,8 @@
 				<p>
 					<small>Designed and built with <3 by <?php echo anchor('http://neerajkumar.name/', 'Neeraj Kumar', 'target="_blank"'); ?></small>
 				</p>
+				<p>Spread some love!</p>
+				<div class="fb-like" data-href="<?php echo base_url(); ?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>		
 			</div>
 		</div>
 	</div>
