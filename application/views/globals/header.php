@@ -58,13 +58,26 @@
     }(document, 'script', 'facebook-jssdk'));</script>
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-md-6">
             <h1><a href="<?php echo site_url(); ?>">Shared Count</a></h1>
             <p>
               <small>
                 A nice little tool that will fetch social media shares for a url
               </small>
             </p>
-            <hr />
           </div>
+          <div class="col-md-6" style="text-align: right">
+            <h1>
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- half banner -->
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:234px;height:60px"
+                   data-ad-client="ca-pub-4533175894495099"
+                   data-ad-slot="4761540364"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </h1>
+          </div>
+          <hr />
         </div>
